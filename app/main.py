@@ -15,7 +15,7 @@ def main(argv):
     urlprefix = 'http://54.92.123.84/search?'
     query = [
       ('ackey', '869388c0968ae503614699f99e09d960f9ad3e12'),
-      ('q', 'Title:' + urllib.quote(v.decode(sys.stdin.encoding).encode('utf-8'))),
+      ('q', 'Title:' + urllib.quote(v)),
     ]
 
     url = urlprefix
@@ -32,8 +32,8 @@ def main(argv):
 
     if (number > maxnumber):
       maxnumber = number
-      maxtitle = v.decode(sys.stdin.encoding).encode('utf-8')
+      maxtitle = v
 
   string = '{name: ' + maxtitle + ', count:' + str(number) + '}'
-  string = string.decode('utf-8').encode(sys.stdin.encoding)
+  string = string
   print(string)
