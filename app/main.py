@@ -15,7 +15,7 @@ def main(argv):
     urlprefix = 'http://54.92.123.84/search?'
     query = [
       ('ackey', '869388c0968ae503614699f99e09d960f9ad3e12'),
-      ('q', 'Title:' + urllib.quote(v.encode('utf-8'))),
+      ('q', 'Title:' + urllib.quote(v.decode(sys.stdin.encoding).encode('utf-8'))),
     ]
 
     url = urlprefix
@@ -27,16 +27,13 @@ def main(argv):
     resdata = response.read()
 
     root = ET.fromstring(resdata)
-    result = root.find(u'.//result')
+    result = root.find('.//result')
     number = int(result.get('numFound'))
 
     if (number > maxnumber):
       maxnumber = number
-      maxtitle = v
+      maxtitle = v.decode(sys.stdin.encoding).encode('utf-8')
 
-  jsoncontent = {
-    "name": maxtitle,
-    "count": maxnumber
-  }
-  jsonstring = json.dumps(dict)
-  print(jsonstring)
+  string = '{name: ' + maxtitle + ', count:' + str(number) + '}'
+  string = string.decode('utf-8').encode(sys.stdin.encoding)
+  print(string)
