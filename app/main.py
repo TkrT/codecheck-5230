@@ -35,5 +35,5 @@ def main(argv):
       maxnumber = number
       maxtitle = v
 
-  string = '{"name":"' + maxtitle + '","count":' + str(number) + '}'
+  string = '{"name":"' + maxtitle + '","count":' + str(maxnumber) + '}'
   print(string)
