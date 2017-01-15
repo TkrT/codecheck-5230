@@ -28,6 +28,7 @@ def main(argv):
 
     root = ET.fromstring(resdata)
     result = root.find(u'.//result')
+    number = int(result.get('numFound'))
 
     if (number > maxnumber):
       maxnumber = number
