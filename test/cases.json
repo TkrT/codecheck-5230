@@ -1,0 +1,102 @@
+[
+  {
+    "input": ["メジャー・リーグ"],
+    "output": {"name":"メジャー・リーグ", "count":23}
+  },
+  {
+    "input": ["AKB", "NMB", "HKT", "SKE", "JKT"],
+    "output": {"name":"AKB", "count":294}
+  },
+  {
+    "input": ["ヒラリー・クリントン", "ドナルド・トランプ"],
+    "output": {"name":"ヒラリー・クリントン", "count":172}
+  },
+  {
+    "input": ["希望","絶望"],
+    "output":  {"name":"希望","count":4641}
+  },
+  {
+    "input": ["おでん","うどん"],
+    "output": {"name":"うどん","count":198}
+  },
+  {
+    "input": ["うでん","おどん"],
+    "output": {"name":"うでん","count":290}
+  },
+  {
+    "input": ["ハロウィン","ハロウィーン"],
+    "output": {"name":"ハロウィーン","count":99}
+  },
+  {
+    "input": ["仮面ライダー","ウルトラマン"],
+    "output": {"name":"ウルトラマン","count":97}
+  },
+  {
+    "input": ["UNHCR", "UNICEF"],
+    "output": {"name":"UNHCR","count":94}
+  },
+  {
+    "input": ["ISIS", "ISIL", "イスラム国"],
+    "output": {"name":"イスラム国","count":1860}
+  },
+  {
+    "input": ["シリア", "ウクライナ"],
+    "output": {"name":"シリア","count":1949}
+  },
+  {
+    "input": ["IoT", "VR", "AR"],
+    "output": {"name":"IoT","count":67}
+  },
+  {
+    "input": ["うどん", "そば", "らーめん"],
+    "output": {"name":"そば","count":1332}
+  },
+  {
+    "input": ["つけ麺", "まぜそば", "油そば"],
+    "output": {"name":"つけ麺","count":4}
+  },
+  {
+    "input": ["グーグル", "アップル", "マイクロソフト", "アマゾン"],
+    "output": {"name":"アップル","count":513}
+  },
+  {
+    "input": ["Google", "Apple", "Microsoft", "Amazon"],
+    "output": {"name":"Google","count":15}
+  },
+  {
+    "input": ["安心して下さい、穿いてますよ。"],
+    "output": {"name":"安心して下さい、穿いてますよ。","count":0}
+  },
+  {
+    "input": ["ジャーナリズム"],
+    "output": {"name":"ジャーナリズム", "count":248}
+  },
+  {
+    "input": ["五郎丸歩", "ドローン", "松岡修造"],
+    "output": {"name":"ドローン", "count":200}
+  },
+  {
+    "input": ["五郎丸歩", "松岡修造"],
+    "output": {"name":"五郎丸歩", "count":58}
+  },
+  {
+    "input": ["民主党", "自民党"],
+    "output": {"name":"自民党", "count":5778}
+  },
+  {
+    "input": ["上院", "下院"],
+    "output": {"name":"上院", "count":800}
+  },
+  {
+    "input": ["衆議院", "参議院"],
+    "output": {"name":"衆議院","count":291}
+  },
+  {
+    "input": ["報道の自由", "Freedom of Press"],
+    "output": {"name":"報道の自由","count":198}
+  },
+  {
+    "input": ["セ・リーグ", "パ・リーグ"],
+    "output": {"name":"セ・リーグ", "count":562}
+  }
+]
