@@ -15,7 +15,7 @@ def main(argv):
     urlprefix = 'http://54.92.123.84/search?'
     query = [
       ('ackey', '869388c0968ae503614699f99e09d960f9ad3e12'),
-      ('q', 'Title:' + urllib.quote(v)),
+      ('q', 'Body:' + urllib.quote(v)),
     ]
 
     url = urlprefix
@@ -34,6 +34,9 @@ def main(argv):
       maxnumber = number
       maxtitle = v
 
-  string = '{name: ' + maxtitle + ', count:' + str(number) + '}'
-  string = string
-  print(string)
+  jsoncontent = {
+    'name': maxtitle,
+    'count': maxnumber
+  }
+  jsonstring = json.dumps(jsoncontent, sort_keys=False, ensure_ascii=False)
+  print(jsonstring)
