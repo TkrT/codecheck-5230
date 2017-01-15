@@ -1,5 +1,6 @@
 ﻿# coding: utf-8
 # エンコードはutf-8
+#更新
 
 import sys
 import urllib
