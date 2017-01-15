@@ -10,7 +10,7 @@ import json
 
 def main(argv):
   maxtitle = ""
-  maxnumber = 0
+  maxnumber = -1
 
   for v in argv:
     urlprefix = 'http://54.92.123.84/search?'
