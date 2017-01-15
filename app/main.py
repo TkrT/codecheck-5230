@@ -34,9 +34,8 @@ def main(argv):
       maxnumber = number
       maxtitle = v
 
-  jsoncontent = {
-    'name': maxtitle,
-    'count': maxnumber
-  }
+  jsoncontent = OrderedDict()
+  jsoncontent['name'] = maxtitle
+  jsoncontent['count'] = maxnumber
   jsonstring = json.dumps(jsoncontent, sort_keys=False, ensure_ascii=False)
   print(jsonstring)
