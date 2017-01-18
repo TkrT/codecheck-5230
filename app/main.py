@@ -68,4 +68,4 @@ def main(argv):
     string = '{"name":"' + maxTitle + '","count":' + str(maxNumber) + '}'
 
     #出力
-    print(os.fsencode(string))
+    print(string.encode('utf-8'))
