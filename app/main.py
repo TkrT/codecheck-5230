@@ -44,7 +44,7 @@ def main(argv):
     keywordNumber = len(argv)
     Keywords = []
     for i in range(0, keywordNumber):
-        Keywords.append(argv[i])
+        Keywords.append(os.fsencode(argv[i]).decode('utf-8'))
 
     #最大件数取得用変数を初期化
     maxTitle = ""
