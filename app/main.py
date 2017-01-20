@@ -40,7 +40,7 @@ def main(argv):
     keywordNumber = len(argv)
     Keywords = []
     for i in range(0, keywordNumber):
-        Keywords.append(os.fsencode(argv[i]).decode(sys.getfilesystemencoding()))
+        Keywords.append(os.fsencode(argv[i]).decode('utf-8'))
 
     #記事検索用のプレフィックスを作成
     prefix = 'http://54.92.123.84/search?'
