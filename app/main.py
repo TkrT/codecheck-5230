@@ -12,6 +12,12 @@ def get(url):
     response = yield from aiohttp.request('GET', url)
     return (yield from response.text())
 
+#XMLを解析して件数を取得
+def analyzeAsahiXML(page):
+    root = ET.fromstring(page)
+    result = root.find('.//result')
+    return (int(result.get('numFound')))
+
 #記事件数の取得
 @asyncio.coroutine
 def getMaximumArticleNumber(keyword, prefix, maxTitle, maxNumber):
@@ -27,12 +33,6 @@ def getMaximumArticleNumber(keyword, prefix, maxTitle, maxNumber):
     if (number > maxNumber[0]):
         maxNumber[0] = number
         maxTitle[0] = keyword
-
-def analyzeAsahiXML(page):
-    #件数を取得
-    root = ET.fromstring(page)
-    result = root.find('.//result')
-    return (int(result.get('numFound')))
 
 def main(argv):
     #キーワードリストを作成
