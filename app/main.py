@@ -1,5 +1,6 @@
 ﻿#!/usr/bin/env python3
 # coding: utf-8
+import sys
 import os
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -20,7 +21,7 @@ def analyzeAsahiXML(page):
 
 #記事件数の取得
 @asyncio.coroutine
-def getMaximumArticleNumber(keyword, prefix, maxTitle, maxNumber):
+def getMaximumArticleNumber(maxTitle, maxNumber, prefix, keyword):
     #URLの作成と読み込み
     q = "Body:" + keyword 
     url = prefix + 'q=' + urllib.parse.quote(q.encode('utf-8'))
@@ -39,7 +40,7 @@ def main(argv):
     keywordNumber = len(argv)
     Keywords = []
     for i in range(0, keywordNumber):
-        Keywords.append(os.fsencode(argv[i]).decode('utf-8'))
+        Keywords.append(os.fsencode(argv[i]).decode(sys.getfilesystemencoding()))
 
     #記事検索用のプレフィックスを作成
     prefix = 'http://54.92.123.84/search?'
@@ -56,7 +57,7 @@ def main(argv):
 
     #記事検索
     loop = asyncio.get_event_loop()
-    f = asyncio.wait([getMaximumArticleNumber(v, prefix, maxTitle, maxNumber) for v in Keywords])
+    f = asyncio.wait([getMaximumArticleNumber(maxTitle, maxNumber, prefix, v) for v in Keywords])
     loop.run_until_complete(f)
 
     #出力を整形
